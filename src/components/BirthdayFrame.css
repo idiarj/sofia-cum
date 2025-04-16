@@ -1,0 +1,82 @@
+.birthday-frame {
+    border: 5px solid pink;
+    border-radius: 20px;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 10px pink;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .birthday-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .birthday-header h2 {
+    font-family: cursive;
+    font-size: 2rem;
+    color: #d63384;
+  }
+  
+  .birthday-img {
+    width: 120px;
+    border-radius: 10px;
+  }
+  
+  .birthday-img-center {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .birthday-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  
+  .birthday-button {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .birthday-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .birthday-frame-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .birthday-button::after {
+    content: "🌸🌼🌺";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.4s ease;
+    font-size: 2rem;
+    pointer-events: none;
+  }
+  
+  .birthday-button.clicked::after {
+    transform: translate(-50%, -200%) scale(1);
+    opacity: 1;
+  }
+  

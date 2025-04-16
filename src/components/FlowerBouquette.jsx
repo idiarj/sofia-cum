@@ -7,8 +7,10 @@ const FlowerBouquet = () => {
       marginTop: "2rem",
       display: "flex",
       justifyContent: "center",
-      animation: "fadeIn 2s ease-out forwards",
-      opacity: 0
+      opacity: 0,
+      transform: "scale(0.9)",
+      filter: "blur(10px)",
+      animation: "fadeBlurIn 2s ease-out forwards"
     }}>
       <img
         src={bouquet}
@@ -22,9 +24,16 @@ const FlowerBouquet = () => {
       />
       <style>
         {`
-          @keyframes fadeIn {
-            to {
+          @keyframes fadeBlurIn {
+            0% {
+              opacity: 0;
+              transform: scale(0.9);
+              filter: blur(20px);
+            }
+            100% {
               opacity: 1;
+              transform: scale(1);
+              filter: blur(0px);
             }
           }
         `}

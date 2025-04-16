@@ -22,9 +22,12 @@
   }
   
   .birthday-img {
-    width: 120px;
+    max-width: 100px;
+    width: 25%;
+    height: auto;
     border-radius: 10px;
   }
+  
   
   .birthday-img-center {
     width: 200px;
